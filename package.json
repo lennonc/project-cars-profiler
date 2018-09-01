@@ -1,0 +1,15 @@
+{
+  "name": "pcars-profiler",
+  "version": "0.1.0",
+  "description": "Node Based Profiler for Project Cars UDP stream",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^2.0.5"
+  }
+}
