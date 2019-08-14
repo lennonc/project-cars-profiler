@@ -72,6 +72,8 @@ let Packet = {
         sBoostAmount: peek.payload.readUInt8(46),
         sCrashState: peek.payload.readUInt8(47),
         
+        sOdometerKM: peek.payload.readFloatLE(48),
+        sOrientation: peek.payload.readFloatLE(52), // TODO: This is an array of 3 floats. Need to parse this properly
       }
     };
     decodeTelemetry(packet, callback)
@@ -92,9 +94,9 @@ function sneak (content, callback) {
     payload: content
   };
 
-  // console.log('====================================');
-  // console.log(peek);
-  // console.log('====================================');
+  console.log('====================================');
+  console.log(peek);
+  console.log('====================================');
   
   if (peek.header.mPacketType === 0)  {
 
