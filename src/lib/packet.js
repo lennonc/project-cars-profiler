@@ -12,7 +12,6 @@ function decodeTelemetry(packet, callback) {
       sUnfilteredClutch: unsignedClamp(packet.data.sUnfilteredClutch, 255),
 
       // Car State
-
       sCarFlags: packet.data.sCarFlags,
       sOilTempCelcius: packet.data.sOilTempCelcius,
       sOilPressureKPa: packet.data.sOilPressureKPa,
